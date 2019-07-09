@@ -174,7 +174,7 @@
 /*****************************************************************/
 // Select your hardware here by uncommenting one line!
 //#define HW__VERSION_CODE 10125 // SparkFun "9DOF Razor IMU" version "SEN-10125" (HMC5843 magnetometer)
-//#define HW__VERSION_CODE 10736 // SparkFun "9DOF Razor IMU" version "SEN-10736" (HMC5883L magnetometer)
+#define HW__VERSION_CODE 10736 // SparkFun "9DOF Razor IMU" version "SEN-10736" (HMC5883L magnetometer)
 //#define HW__VERSION_CODE 10183 // SparkFun "9DOF Sensor Stick" version "SEN-10183" (HMC5843 magnetometer)
 //#define HW__VERSION_CODE 10321 // SparkFun "9DOF Sensor Stick" version "SEN-10321" (HMC5843 magnetometer)
 //#define HW__VERSION_CODE 10724 // SparkFun "9DOF Sensor Stick" version "SEN-10724" (HMC5883L magnetometer)
@@ -202,7 +202,7 @@
 #define OUTPUT__FORMAT_BINARY 1 // Outputs data as binary float
 
 // Select your startup output mode and format here!
-int output_mode = OUTPUT__MODE_ANGLES;
+int output_mode = OUTPUT__MODE_ANGLES; // anjiss change from OUTPUT__MODE_ANGLES to OUTPUT__MODE_SENSORS_CALIB
 int output_format = OUTPUT__FORMAT_TEXT;
 
 // Select if serial continuous streaming output is enabled per default on startup.
