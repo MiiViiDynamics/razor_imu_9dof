@@ -1,0 +1,33 @@
+<launch>
+  <arg name="razor_config_file" default="$(find razor_imu_9dof)/config/my_razor.yaml"/>
+  <node pkg="razor_imu_9dof" type="imu_node.py" name="imu_node" output="screen">
+    <rosparam file="$(arg razor_config_file)" command="load"/>
+
+    <param name="~port" value="/dev/ttyUSB0"/>
+
+    <param name="~accel_x_min" value="-292.0"/>
+    <param name="~accel_x_max" value="270.0"/>
+    <param name="~accel_y_min" value="-277.0"/>
+    <param name="~accel_y_max" value="276.0"/>
+    <param name="~accel_z_min" value="-295.0"/>
+    <param name="~accel_z_max" value="212.0"/>
+
+    <param name="~magn_x_min" value="-600.0"/>
+    <param name="~magn_x_max" value="600.0"/>
+    <param name="~magn_y_min" value="-600.0"/>
+    <param name="~magn_y_max" value="600.0"/>
+    <param name="~magn_z_min" value="-600.0"/>
+    <param name="~magn_z_max" value="600.0"/>
+
+    <param name="~calibration_magn_use_extended" value="False"/>
+    <param name="~magn_ellipsoid_center" value="[0, 0, 0]"/>
+    <param name="~magn_ellipsoid_transform" value="[[0, 0, 0], [0, 0, 0], [0, 0, 0]]"/>
+
+    <param name="~imu_yaw_calibration" value="0.0"/>
+    <param name="~gyro_average_offset_x" value="-2.34"/>
+    <param name="~gyro_average_offset_y" value=" 31.96"/>
+    <param name="~gyro_average_offset_z" value="4.63"/>
+
+  </node>
+
+</launch>
